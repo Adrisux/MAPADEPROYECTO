@@ -19,7 +19,7 @@ public class JavaApplication4 {
     public static void main(String[] args) {
         // TODO code application logic here
         
-        JOptionPane.showConfirmDialog(null, "Hola Mundo");
+        JOptionPane.showConfirmDialog(null, "Ejercicio de prueba");
     }
     
 }
