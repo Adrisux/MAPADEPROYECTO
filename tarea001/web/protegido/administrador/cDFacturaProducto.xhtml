@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                template="./../../plantillas/general.xhtml"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+    <ui:define name="content">
+        content
+           -----------------------------------------------
+        
+        <h:form id="frmDFacturaProducto">  
+            <p:panel id="pnlDFacturaProducto">
+    <p:dataTable 
+        id="tblDFacturaProducto" 
+        value="#{cDfacturaProducto.lista}"
+        var="dfp"
+        selectionMode="single"
+        selection="#{cDfacturaproducto.selectedDFacturapProducto}"
+        rowKey="#{dfp.id_dfactura_producto}">
+    <p:column headerText="ID_DETALLE_FACTURA_PRODUCTO">
+        
+        <h:outputText value="#{dfp.id_dfactura_producto}" />
+    </p:column>
+        
+    <p:column headerText="ID_FACTURA">
+        <h:outputText value="#{dfp.numero_factura.numero_factura}" />
+    </p:column>
+        
+    <p:column headerText="ID_PRODUCTO">
+        <h:outputText value="#{dfp.id_producto.id_producto}" />
+    </p:column>
+ 
+    <p:column headerText="CANTIDAD">
+        <h:outputText value="#{dfp.cantidad}" />
+    </p:column>
+ 
+    <p:column headerText="SUBTOTAL">
+        <h:outputText value="#{dfp.subtotal}" />
+    </p:column>
+        
+</p:dataTable>
+         </p:panel>
+    </h:form>
+        
+        ------------------------------------------
+        
+        
+    </ui:define>
+
+</ui:composition>
